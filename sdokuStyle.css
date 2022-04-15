@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.row{
+    display: flex;
+}
+.col{
+    display: flex;
+    flex-direction: column;
+}
+.sdoku2{
+    width: 900px;
+    height: 900px;
+    margin: 50px auto;
+    background-color: #999;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.sdoku2-box-wraper{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: 5px solid black;
+}
+.sdoku2-box{
+    background-color: #777;
+    border: 1px solid black;
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+}

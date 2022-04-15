@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./sdokuStyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sdoku2">
+            <div class="sdoku2-box-wraper row1 col1">
+                <input class="sdoku2-box row-box1 col-box1" type="text" value=""></input>
+                <input class="sdoku2-box row-box1 col-box2" type="text" value=""></input>
+                <input class="sdoku2-box row-box2 col-box1" type="text" value=""></input>
+                <input class="sdoku2-box row-box2 col-box2" type="text" value=""></input>
+            </div>
+            <div class="sdoku2-box-wraper row1 col2">
+                <input class="sdoku2-box row-box1 col-box1" type="text" value=""></input>
+                <input class="sdoku2-box row-box1 col-box2" type="text" value=""></input>
+                <input class="sdoku2-box row-box2 col-box1" type="text" value=""></input>
+                <input class="sdoku2-box row-box2 col-box2" type="text" value=""></input>
+            </div>
+            <div class="sdoku2-box-wraper row2 col1">
+                <input class="sdoku2-box row-box1 col-box1" type="text" value=""></input>
+                <input class="sdoku2-box row-box1 col-box2" type="text" value=""></input>
+                <input class="sdoku2-box row-box2 col-box1" type="text" value=""></input>
+                <input class="sdoku2-box row-box2 col-box2" type="text" value=""></input>
+            </div>
+            <div class="sdoku2-box-wraper row2 col2">
+                <input class="sdoku2-box row-box1 col-box1" type="text" value=""></input>
+                <input class="sdoku2-box row-box1 col-box2" type="text" value=""></input>
+                <input class="sdoku2-box row-box2 col-box1" type="text" value=""></input>
+                <input class="sdoku2-box row-box2 col-box2" type="text" value="2"></input>
+            </div>
+        </div>
+        <div class="time">
+            <input class="time-second" type="number" value="">
+        </div>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script>
+        // SDOKU LOGIC
+        window.onload = function(){
+
+        }
+        var tmpNumber = 0;
+        var chkViewtime = setInterval(function() {
+	        tmpNumber++;
+            $('.time-second').val() = tmpNumber;
+        },1000);
+    </script>
+</body>
+</html>
