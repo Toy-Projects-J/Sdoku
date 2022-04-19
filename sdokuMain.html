@@ -11,7 +11,7 @@
     <div class="container">
         <div class="sdoku2">
             <div class="sdoku2-box-wraper row1 col1">
-                <input class="sdoku2-box row-box1 col-box1" type="text" value=""></input>
+                <input class="sdoku2-box row-box1 col-box1" type="text" value="1"></input>
                 <input class="sdoku2-box row-box1 col-box2" type="text" value=""></input>
                 <input class="sdoku2-box row-box2 col-box1" type="text" value=""></input>
                 <input class="sdoku2-box row-box2 col-box2" type="text" value=""></input>
@@ -45,14 +45,38 @@
     crossorigin="anonymous"></script>
     <script>
         // SDOKU LOGIC
-        window.onload = function(){
+        $('.sdoku2-box').keyup(function(){
+            // 여기서 parent, children, class이름을 이용해 로직 구현
+            var inputValue = $(this).val();
+            var inputParent = $(this).parent();
+            var inputClassName = $(this).prop('className');
+            var isCollect = true;
 
-        }
-        var tmpNumber = 0;
-        var chkViewtime = setInterval(function() {
-	        tmpNumber++;
-            $('.time-second').val() = tmpNumber;
-        },1000);
+            // 같은 칸 안의 다른 요소들과 값 비교
+            inputParent.children().each(function(){
+                if(inputClassName !== $(this).prop('className')){
+                    if(inputValue == $(this).val()) isCollect = false;
+                }
+            })
+            if(!isCollect) $(this).css('color','red')
+            else $(this).css('color','black')
+
+            
+        });
+
+        // $('.sdoku2-box').on("input",function(){
+        //     alert("dkdk!!")
+        //     var inputClass = $(this).prop('className')
+        //     var inputValue = $(this).val();
+        //     var wraperClass = $(this).parent().prop('className');
+        //     $('.'+wraperClass).children().each(function(){
+        //         if(inputClass === $(this).prop('className')) continue;
+        //         if(inputValue === $(this).val()){
+        //             alert("다시!")
+        //         }
+        //     })
+        // })
+        // console.log($('.sdoku2-box-wraper row1 col1').parent())
     </script>
 </body>
 </html>
