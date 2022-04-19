@@ -61,7 +61,11 @@
             if(!isCollect) $(this).css('color','red')
             else $(this).css('color','black')
 
-            
+            // className 을 이용해야 하므로 children, parents는 한계가 있어
+            // find를 통해 className을 탐색해 값을 모두 비교.
+            // 가로 로직은 row, row-box 로 비교
+            // 세로 로직은 col, col-box 로 비교
+            var grand = inputParent.parent();
         });
 
         // $('.sdoku2-box').on("input",function(){
