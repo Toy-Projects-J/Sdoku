@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./sdokuStyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>SUDOKU</h1>
+            <p>
+                스도쿠(Sudoku) 또는 넘버 플레이스(Number Place)는 숫자 퍼즐로,
+                <br>
+                가로 9칸, 세로 9칸으로 이루어져 있는 표에 1부터 9까지의 숫자를 채워 넣는 퍼즐이다.
+                <br>
+                숫자넣기로도 불린다. “숫자는 한 번씩만 쓸 수 있다”를 줄인 일본 말로
+                <br>
+                2005년 전 세계적으로 이 말과 함께 퍼즐이 퍼져나갔다.
+                <br>
+                퍼즐을 푸는 방법은 아홉 가로줄, 세로줄, 3X3 칸에 1에서 9까지의 숫자를 중복되지 않게 한 번씩만 넣으면 된다.
+                <br>
+                출처 : 위키백과(https://ko.wikipedia.org)
+            </p>
+        </div>
+        <div class="intro-container">
+            <h1>INTRO</h1>
+            <p>
+                평소에 스도쿠를 즐겨하던 저는 프로젝트 구상 중 스도쿠를 직접 만들어보는 것은 어떨까?
+                <br>
+                하는 생각이 났고 아직은 부족한 점은 많지만 스도쿠 로직에 대한 이해를 위해 프로젝트를 진행하게 되었습니다.
+                <br>
+                위와 같이 스도쿠는 주어진 칸 안에 숫자를 입력하면서
+                <br>
+                가로, 세로, 해당 칸이 위치한 박스 안에 중복되는 숫자가 없게정답을 찾아가는 게임입니다.
+                <br>
+                많은 사람들에게 알려져 쉽게 찾아볼 수 있는 퍼즐이지만 간단한 퍼즐을 직접 만들면서
+                <br>
+                시중에 배포되어있는 스도쿠 게임의 개념과 로직을 이해하기 위해 제작하게 되었습니다.
+                <br>
+                <br>
+                스도쿠 로직을 이해하고 만들기 위해 스도쿠API를 이용할 수 있었으나
+                <br>
+                제가 직접 로직구현을 하면서 조금 더 깊게 이해할 수 있었고, 더 나은 방법이 있나 항상 고민중에 있습니다.
+            </p>
+        </div>
+        <div class="sdoku-container">
+            <div class="sdoku2">
+                <div class="sdoku2-box-wraper row1 col1">
+                    <input class="sdoku2-box box11 row-box1 col-box1" type="text" value="1"></input>
+                    <input class="sdoku2-box box11 row-box1 col-box2" type="text" value=""></input>
+                    <input class="sdoku2-box box11 row-box2 col-box1" type="text" value=""></input>
+                    <input class="sdoku2-box box11 row-box2 col-box2" type="text" value=""></input>
+                </div>
+                <div class="sdoku2-box-wraper row1 col2">
+                    <input class="sdoku2-box box12 row-box1 col-box1" type="text" value=""></input>
+                    <input class="sdoku2-box box12 row-box1 col-box2" type="text" value=""></input>
+                    <input class="sdoku2-box box12 row-box2 col-box1" type="text" value=""></input>
+                    <input class="sdoku2-box box12 row-box2 col-box2" type="text" value=""></input>
+                </div>
+                <div class="sdoku2-box-wraper row2 col1">
+                    <input class="sdoku2-box box21 row-box1 col-box1" type="text" value=""></input>
+                    <input class="sdoku2-box box21 row-box1 col-box2" type="text" value=""></input>
+                    <input class="sdoku2-box box21 row-box2 col-box1" type="text" value=""></input>
+                    <input class="sdoku2-box box21 row-box2 col-box2" type="text" value=""></input>
+                </div>
+                <div class="sdoku2-box-wraper row2 col2">
+                    <input class="sdoku2-box box22 row-box1 col-box1" type="text" value=""></input>
+                    <input class="sdoku2-box box22 row-box1 col-box2" type="text" value=""></input>
+                    <input class="sdoku2-box box22 row-box2 col-box1" type="text" value=""></input>
+                    <input class="sdoku2-box box22 row-box2 col-box2" type="text" value="2"></input>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <h2>CONTECT</h2>
+        </div>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="sdokuLogic.js"></script>
+</body>
+</html>

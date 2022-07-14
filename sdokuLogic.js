@@ -3,8 +3,9 @@ $('.sdoku2-box').keyup(function logicCheck(){
     // 1~4의 값 입력
     if($(this).val()>4 || $(this).val()<1){
         alert('1~4의 값만 입력할 수 있습니다.')
+        $(this).val(null);
         $(this).focus;
-        return;
+        return false;
     }
     // 여기서 parent, children, class이름을 이용해 로직 구현
     var inputValue = $(this).val();
@@ -24,7 +25,6 @@ $('.sdoku2-box').keyup(function logicCheck(){
     })
     if(!isBoxCollect){
         $(this).css('color','red')
-        return;
     }
     else $(this).css('color','black')
 
@@ -50,7 +50,6 @@ $('.sdoku2-box').keyup(function logicCheck(){
     })
     if(!isRowCollect){
         $(this).css('color','red')
-        return;
     }
     // Col Check
     var isColCollect = true;
@@ -68,11 +67,7 @@ $('.sdoku2-box').keyup(function logicCheck(){
     })
     if(!isColCollect){
         $(this).css('color','red')
-        return;
-    }   
+    }
+    
 });
 // 여기까지 로직 구현 완성.
-// But!
-// 1. 한번 빨간색으로 바뀐 글자를 새로 입력하지 않으면 색이 그대로다.
-// 2. 완성된 스도쿠를 Check하는 기능 필요.
-// 3. 3x3, 4x4일 때를 생각해 바꾸고, grid가 아닌 flex의 space-around를 사용해 크기조정.

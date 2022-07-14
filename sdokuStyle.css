@@ -1,33 +1,82 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gugi', cursive;
 }
-.row{
-    display: flex;
+.container {
+  position: relative;
+  z-index: 1;
 }
-.col{
-    display: flex;
-    flex-direction: column;
+.container::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-image: url(images/pexels-dmitry-demidov-3852577.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.4;
 }
-.sdoku2{
-    width: 900px;
-    height: 900px;
-    margin: 50px auto;
-    background-color: #999;
-    padding: 50px;
-    display: grid;
-    grid-template-columns: 50% 50%;
+.row {
+  display: flex;
 }
-.sdoku2-box-wraper{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    border: 5px solid black;
+.col {
+  display: flex;
+  flex-direction: column;
 }
-.sdoku2-box{
-    background-color: #777;
-    border: 1px solid black;
-    position: relative;
-    text-align: center;
-    font-size: 50px;
+.header {
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+.header h1 {
+  margin-bottom: 40px;
+  font-size: 50px;
+}
+.header p {
+  line-height: 50px;
+  font-size: 18px;
+  border: 1px solid black;
+  margin: 30px;
+}
+.left-side {
+  position: absolute;
+  right: 10%;
+}
+.intro-container {
+  text-align: center;
+}
+.intro-container h1 {
+  margin: 30px;
+}
+.intro-container p {
+  line-height: 30px;
+  font-size: 18px;
+}
+.sdoku2 {
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  background-color: #999;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border: 2px solid black;
+}
+.sdoku2-box-wraper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border: 2px solid black;
+}
+.sdoku2-box {
+  background-color: #777;
+  border: 1px solid black;
+  position: relative;
+  text-align: center;
+  font-size: 50px;
 }
